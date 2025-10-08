@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+🚀 DevBlogs – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend for a Medium-like blogging platform built with React, TypeScript, and Zod.
 
-Currently, two official plugins are available:
+🧾 Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DevBlogs Frontend is a React + TypeScript web application that serves as the user interface for the DevBlogs platform — a modern, full-stack blogging site inspired by Medium.
 
-## React Compiler
+The frontend communicates with a serverless backend (built on Cloudflare Workers + Hono + Prisma) and provides seamless user experiences for authentication, blog creation, and content browsing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It’s designed for speed, scalability, and type safety — using Zod for input validation and type inference, and styled with a clean, responsive UI built using Tailwind CSS.
 
-## Expanding the ESLint configuration
+🌟 Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧍 User Authentication – Sign up, Sign in, and JWT-based session handling
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📝 Create & Edit Blogs – Rich-text or Markdown-compatible blog creation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📖 View Blog Posts – Fetch individual blogs by ID (GET /api/v1/blog/:id)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📚 Browse Blogs – Display all blogs in bulk (GET /api/v1/blog/bulk)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🔍 Responsive UI – Optimized for mobile and desktop screens
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🔐 Zod Validation – Ensures clean and type-safe form submissions
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚡ Fast API Integration – Built to communicate seamlessly with Cloudflare Workers backend
+
+💾 State Management – React hooks and local state for simple, predictable behavior
+
+🧭 Routing – React Router for navigation between pages
+
+⚙️ Technical Specifications
+Category	Technology / Tool
+Frontend Framework	React (v18+)
+Language	TypeScript
+Validation Library	Zod (for schema validation + type inference)
+Styling	Tailwind CSS
+Routing	React Router DOM
+API Client	Axios / Fetch API
+State Handling	React Hooks / React Query (optional)
+Build Tool	Vite
+Authentication	JWT (from backend; cookie or header-based)
+Backend Communication	REST API (Cloudflare Workers + Hono)
+ORM / Database (Backend)	Prisma + PostgreSQL
+Deployment (Frontend)	Vercel / Netlify / Cloudflare Pages
