@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* === File Structure === */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* === Module & Target === */
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+
+    /* === TypeScript Output === */
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    /* === Type Safety === */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* === Optional but useful === */
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@firodoshkhan/zodinput",
+  "version": "1.0.3",
+  "description": "Common Zod input schemas for frontend and backend validation",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+  ".": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "./blog": {
+    "import": "./dist/blog.js",
+    "require": "./dist/blog.js",
+    "types": "./dist/blog.d.ts"
+  },
+  "./user": {
+    "import": "./dist/user.js",
+    "require": "./dist/user.js",
+    "types": "./dist/user.d.ts"
+  }
+},
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "zod",
+    "schema",
+    "validation",
+    "typescript",
+    "shared"
+  ],
+  "author": "Firdosh Khan",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
